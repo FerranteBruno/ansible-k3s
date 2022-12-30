@@ -1,0 +1,5 @@
+#ping
+ansible -i ./inventory/hosts k3s_cluster -m ping --user wirAdmin --ask-pass
+
+#update
+ansible-playbook ./playbooks/apt-update.yml --user wirAdmin --ask-pass --ask-become-pass -i ./inventory/hosts
